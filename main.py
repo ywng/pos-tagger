@@ -151,7 +151,7 @@ class HMMTagger:
 
 
 def save_model(model):
-  pickle.dump(model, open(MODEL_SAVE_PATH%datetime.datetime.now().strftime('%Y-%m-%d_%H-%M-%S'), 'wb'))
+  pickle.dump(model, open(MODEL_SAVE_PATH%datetime.datetime.now().strftime('%Y-%m-%d_%H-%M-%S'), 'wb'), protocol=2)
 
 def load_model(path_to_model):
   model = pickle.load(open(path_to_model, 'rb'))
