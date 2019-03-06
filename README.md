@@ -1,9 +1,9 @@
 # HMM POS Tagger
-This is to train a part-of-speech(POS) tagger based on HMM model, using WSJ from Penn Treebank Corpus.
+This is to train a part-of-speech(POS) tagger based on HMM model, using WSJ from Penn Treebank Corpus.  
 The decoding of the POS state sequence is using Viterbi algorithm (dynamic programming).
 
 ## Handling of Unknown Words
-It bases P(t|w) of unknown word on probability distribution of words which occur once in corpus.
+It bases P(t|w) of unknown word on probability distribution of words which occur once in corpus. 
 To further classify different type of unknwon words, some heuristic rules are used:
 * Unknown Proper Noun: usually the first letter is capital, and with/without hypen.
 * Unknown Noun, Verb, Adjective, Adverb: they are open-class words, bases on common suffixes.
@@ -43,19 +43,19 @@ python main.py --train --train_data "./data/WSJ_02-21.pos"
 
 ### Eval
 Running below script will tag the given word sequence. It will evalute and print the accuracy. 
-For my implementation, with some heuristic handling of unknown words, **tagging accuracy is 95.391593 %**.
---model: path to the trained model file.
---words: the words file to be tagged.
---tags: the tags ground true.
---output: the path where the tag result will be output to.
+For my implementation, with some heuristic handling of unknown words, **tagging accuracy is 95.391593%**.  
+--model: path to the trained model file. 
+--words: the words file to be tagged. 
+--tags: the tags ground true. 
+--output: the path where the tag result will be output to. 
 ```
 python main.py --eval --model ./model/model_2019-03-06_01-19-20.sav --words ./data/WSJ_24.words --tags ./data/WSJ_24.pos --output ./output/wsj_24.pos
 ```
 
 ### Test
---model: path to the trained model file.
---words: the words file to be tagged.
---output: the path where the tag result will be output to.
+--model: path to the trained model file.  
+--words: the words file to be tagged.  
+--output: the path where the tag result will be output to.  
 ```
 python main.py --test --model ./model/model_2019-03-06_01-19-20.sav --words ./data/WSJ_23.words --output ./output/wsj_23.pos
 ```
