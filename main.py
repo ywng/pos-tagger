@@ -53,7 +53,7 @@ class HMMTagger:
         if not word:
           out.write("\n")
         else:
-          out.write("%s\t%s\n" % (word, tag))
+          out.write("{0}\t{1}\n".format(word, tag))
 
   def __prepare_word_seq(self, word_seq_path):
     original_seq, processed_seq = [], []

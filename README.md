@@ -49,7 +49,7 @@ For my implementation, with some heuristic handling of unknown words, **tagging 
 --tags: the tags ground true.   
 --output: the path where the tag result will be output to.  
 ```
-python main.py --eval --model ./model/model_2019-03-06_01-19-20.sav --words ./data/WSJ_24.words --tags ./data/WSJ_24.pos --output ./output/wsj_24.pos
+python main.py --eval --model ./model/model_2019-03-06_12-22-20.sav --words ./data/WSJ_24.words --tags ./data/WSJ_24.pos --output ./output/wsj_24.pos
 ```
 
 ### Test
@@ -57,5 +57,5 @@ python main.py --eval --model ./model/model_2019-03-06_01-19-20.sav --words ./da
 --words: the words file to be tagged.  
 --output: the path where the tag result will be output to.  
 ```
-python main.py --test --model ./model/model_2019-03-06_01-19-20.sav --words ./data/WSJ_23.words --output ./output/wsj_23.pos
+python main.py --test --model ./model/model_2019-03-06_12-22-20.sav --words ./data/WSJ_23.words --output ./output/wsj_23.pos
 ```
