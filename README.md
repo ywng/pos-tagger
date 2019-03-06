@@ -38,7 +38,7 @@ module load python-3.6
 ### Training
 It will produce a model object in ./model/
 ```
-python main.py --train --train_data "./data/WSJ_02-21.pos"
+python3 main.py --train --train_data "./data/WSJ_02-21.pos"
 ```
 
 ### Eval
@@ -49,7 +49,7 @@ For my implementation, with some heuristic handling of unknown words, **tagging 
 --tags: the tags ground true.   
 --output: the path where the tag result will be output to.  
 ```
-python main.py --eval --model ./model/model_2019-03-06_12-32-02.sav --words ./data/WSJ_24.words --tags ./data/WSJ_24.pos --output ./output/wsj_24.pos
+python3 main.py --eval --model ./model/model_2019-03-06_12-32-02.sav --words ./data/WSJ_24.words --tags ./data/WSJ_24.pos --output ./output/wsj_24.pos
 ```
 
 ### Test
@@ -57,5 +57,5 @@ python main.py --eval --model ./model/model_2019-03-06_12-32-02.sav --words ./da
 --words: the words file to be tagged.  
 --output: the path where the tag result will be output to.  
 ```
-python main.py --test --model ./model/model_2019-03-06_12-32-02.sav --words ./data/WSJ_23.words --output ./output/wsj_23.pos
+python3 main.py --test --model ./model/model_2019-03-06_12-32-02.sav --words ./data/WSJ_23.words --output ./output/wsj_23.pos
 ```
