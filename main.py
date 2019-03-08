@@ -21,7 +21,7 @@ class HMMTagger:
     tag_count = defaultdict(int)
 
     with open(train_data_path, "r") as train_data:
-      prev = START_END_OBS
+      prev = START_END_TAG
       for line in train_data:
         if not line.split(): #empty line, means start/end of sentence
           word = START_END_OBS
